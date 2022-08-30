@@ -59,7 +59,7 @@ def message_to_contacts(msg, contacts, gechodriver, gechodriver_log, user_profil
         exit(0)
 
     options = Options()
-    options.headless = True
+    options.headless = False
     firefox_capabilities = DesiredCapabilities.FIREFOX
     firefox_capabilities['marionette'] = True
     firefox_profile = webdriver.FirefoxProfile(user_profile)
@@ -110,10 +110,11 @@ def message_to_contacts(msg, contacts, gechodriver, gechodriver_log, user_profil
         group_title.click()
         time.sleep(1)
 
-        input_xpath = '//div[@contenteditable="true"][@data-tab="6"]'
+        input_xpath = '//div[@contenteditable="true"][@data-testid="conversation-compose-box-input"]'
         try:
             input_box = WebDriverWait(browser, 500).until(EC.presence_of_element_located((By.XPATH, input_xpath)))
-            input_box.send_keys(msg_text)
+            for char in msg_text:
+                input_box.send_keys(char)
             # We were using pyperclip.copy(msg_text) and then pasting here, but it did not work in headless mode.
             # No idea why.
             input_box.send_keys(Keys.ENTER)

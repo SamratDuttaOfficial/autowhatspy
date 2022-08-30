@@ -1,3 +1,19 @@
+Metadata-Version: 2.1
+Name: autowhatspy
+Version: 1.0.8
+Summary: WhatsApp and Email Automation with Python
+Home-page: https://github.com/SamratDuttaOfficial/autowhatspy
+Author: Samrat Dutta
+License: MIT
+Download-URL: https://github.com/SamratDuttaOfficial/autowhatspy/blob/main/dist/autowhatspy-1.0.8.tar.gz
+Keywords: autowhatspy,whatsapp,email,web,bulk messaging
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
 # AutoWhatsPy
 
 ## _WhatsApp and Email Automation with Python_
@@ -208,3 +224,5 @@ If the program fails to send emails to all the given email addresses, check your
 ## License
 
 MIT 
+
+

@@ -14,13 +14,13 @@ def readme() -> str:
 # This call to setup() does all the work
 setup(
     name="autowhatspy",
-    version="1.0.7",
+    version="1.0.8",
     description="WhatsApp and Email Automation with Python",
     long_description=readme(),
     long_description_content_type="text/markdown",
     keywords=['autowhatspy', 'whatsapp', 'email', 'web', 'bulk messaging'],
     url="https://github.com/SamratDuttaOfficial/autowhatspy",
-    download_url="https://github.com/SamratDuttaOfficial/autowhatspy/blob/main/dist/autowhatspy-1.0.7.tar.gz",
+    download_url="https://github.com/SamratDuttaOfficial/autowhatspy/blob/main/dist/autowhatspy-1.0.8.tar.gz",
     author="Samrat Dutta",
     license="MIT",
     classifiers=[

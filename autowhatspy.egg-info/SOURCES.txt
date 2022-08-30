@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.cfg
+setup.py
+autowhatspy/__init__.py
+autowhatspy/message_to_groups_or_contacts.py
+autowhatspy/message_to_unsaved_numbers.py
+autowhatspy/send_bulk_emails.py
+autowhatspy.egg-info/PKG-INFO
+autowhatspy.egg-info/SOURCES.txt
+autowhatspy.egg-info/dependency_links.txt
+autowhatspy.egg-info/requires.txt
+autowhatspy.egg-info/top_level.txt

@@ -78,12 +78,12 @@ def message_to_numbers(msg, numbers_list, gechodriver, gechodriver_log, user_pro
 
         browser.get('https://web.whatsapp.com/send?phone=' + number)
 
-        input_xpath = '//div[@contenteditable="true"][@data-tab="6"]'
+        input_xpath = '//div[@contenteditable="true"][@data-testid="conversation-compose-box-input"]'
         try:
-            input_box = WebDriverWait(browser, 25).until(EC.presence_of_element_located((By.XPATH, input_xpath)))
+            input_box = WebDriverWait(browser, 300).until(EC.presence_of_element_located((By.XPATH, input_xpath)))
             # Wait some seconds to find the input box.
             # If not found within that time, declare that the number does not exist and continue.
-            # Here we are waiting for 25 seconds.
+            # Here we are waiting for 300 seconds.
         except TimeoutException:
             print("Number not found: " + number)
             print('Check the number. Also check the internet connection on your phone and PC.')
@@ -93,7 +93,8 @@ def message_to_numbers(msg, numbers_list, gechodriver, gechodriver_log, user_pro
             continue
 
         try:
-            input_box.send_keys(msg_text)
+            for char in msg_text:
+                input_box.send_keys(char)
             # We were using pyperclip.copy(msg) and then pasting here, but it did not work in headless mode.
             # No idea why.
             input_box.send_keys(Keys.ENTER)
